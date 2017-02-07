@@ -1,0 +1,2 @@
+﻿* Add Bluetooth function
+* Add examples of recovery reconnection state

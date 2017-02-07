@@ -1,0 +1,11 @@
+NetDrone Engine Authors & Contributors
+--------------------------------------
+
+(ordered by the join in time)
+
+Core Developers:
+	Kang Kwi Bog <foxip@vogie.net>
+	Woo Jae Kyun <jaekyun@vogie.net>
+	
+Translators:
+	Kwon Yong Ho <yhk@vogie.net>

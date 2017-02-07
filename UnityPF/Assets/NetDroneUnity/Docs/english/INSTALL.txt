@@ -1,0 +1,94 @@
+﻿﻿#
+# 1. How to install NetDrone Engine for Unity Package
+#
+After creating Unity project, install the downloaded 'NetDroneUnity.unitypackage'.
+Import all files from the importing package.
+
+As below, please add 'Client/Scenes/*' in the 'Build Settings'.
+
+* 0: ExampleMenu.unity
+* 1: ExampleAutoConnect (NDP).unity
+* 2: ExampleChat (NDP).unity
+* 3: ExampleRoom (NDP).unity
+* 4: ExampleWeb (HTTP).unity
+
+The above order is very important because it uses defined 'Enum' same as the scene order.
+
+#
+# 2. Setting as default for connecting server
+#
+You can find GameObject as 'Scripts' from Hierarchy of 'Client/Scenes/*'
+
+Descriptions about 'Default values' is written below.
+
+* Enable DNS: Option for Dynamic DNS user, not static IP (disenable the option if you are static IP user)
+* Remote Ip Or Domain: Installed examples of Unity server in the Origin Studio(test.vogie.net) which is possible to test without installing server. (to static IP user, need to enter IP)
+* Master Main Tcp: Listening tcp port by this server
+* Master Sub Tcp: Listening tcp port by this server
+* Slave Main Udp: Listening ucp port by this server
+* Enable Main Port: Using main port
+* Enable Reliable Udp: Using Reliable udp.
+* Default Login Id: Possible to use Korean and English
+* Default Channel Id: Possible to use the unity server examples, from whole number 1 to 10, which are installed in the Origin Studio.
+
+#
+# 3. How to install and use DataConverter
+#
+# DataConverter
+NetDrone Engine for Unity Package includes data transfer tool to change from 'csv' to 'bytes' format.
+As below, copy 'Tools/DataConverter.zip' file and install under Tools path.
+
+ROOT
+- Assets
+- ProjectSettings
+- Tools (here)
+
+* 'Tools/Dataconverter/temp/*' includes 'csv' file for test.
+* When you run 'DataConverter.exe', all located 'csv' files will be changed and saved as 'bytes' format.
+* Copy the created 'bytes' files under 'Assets/NetDroneUnity/Client/Resources/Binary'.
+
+Data loader of the NetDrone Engine applies to all formats (csv, bytes).
+(Separate of the 'csv' uses only comma(,) and need to column names at first row)
+
+* LoadBytes: Please refer to 'Client/Scripts/DB/ChannelInfoDbm.cs'.
+* LoadCSV: Please refer to 'Client/Scripts/DB/StageInfoDbm.cs'.
+
+# DummyClient
+This client is available for TCP and Reliable UDP test. 
+As below, copy ‘Tools/DummyClient.zip’ file and install under Tools path.
+
+ROOT
+- Assets
+- ProjectSettings
+- Tools (here)
+
+# CryptTester
+
+It is the tool for testing 'the self-developed encryption fuction'(based on RC5 and RC6).
+As below, copy ‘Tools/CryptTester.zip’ file and install under Tools path.
+
+ROOT
+- Assets
+- ProjectSettings
+- Tools (here)
+
+*'String and packet tests' are available. 
+
+# ReuseMemory
+
+It is 'the reusable memory structure tester' that is implemented by 'linked list'.
+As below, copy ‘Tools/ReuseMemory.zip’ file and install under Tools path.
+
+ROOT
+- Assets
+- ProjectSettings
+- Tools (here)
+
+Test with entering number of repeatition.
+
+#
+# 4. How to install examples of unity server in the NetDrone Engine
+#
+Server/studyserver-1.2.0.zip: C# server examples by using Netdrone Unity (available for both visual Studio and Mono Develop)
+Server/unityserver-1.2.0.zip: C++ server examples by using Netdrone Light (there are documents in Docs/*)
+Server/hyperserver-1.2.0.zip: Web server examples for NDP over HTTP (over PHP 5.3)

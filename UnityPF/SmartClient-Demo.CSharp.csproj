@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D7E6209E-D31B-9C73-1684-2F0C1EEFB889}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile>Assets\smcs.rsp</CompilerResponseFile>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>Android:13</UnityBuildTarget>
+    <UnityVersion>5.2.3f1</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_2_3;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_2_3;UNITY_5_2;UNITY_5;ENABLE_NEW_BUGREPORTER;ENABLE_2D_PHYSICS;ENABLE_4_6_FEATURES;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_FRAME_DEBUGGER;ENABLE_GENERICS;ENABLE_HOME_SCREEN;ENABLE_IMAGEEFFECTS;ENABLE_LIGHT_PROBES_LEGACY;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_PLUGIN_INSPECTOR;ENABLE_SHADOWS;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_UNITYEVENTS;ENABLE_VR;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_REFLECTION_BUFFERS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;INCLUDE_IL2CPP;INCLUDE_DIRECTX12;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;ENABLE_LOCALIZATION;ENABLE_ANDROID_ATLAS_ETC1_COMPRESSION;UNITY_ANDROID;UNITY_ANDROID_API;ENABLE_SUBSTANCE;UNITY_ANDROID_API;ENABLE_TEXTUREID_MAP;ENABLE_EGL;ENABLE_NETWORK;ENABLE_RUNTIME_GI;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYADS_RUNTIME;UNITY_UNITYADS_API;ENABLE_MONO;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;DEBUG</DefineConstants>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEngine">
+      <HintPath>Library\UnityAssemblies\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>Library\UnityAssemblies\UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor.iOS.Extensions.Xcode">
+      <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
+    </Reference>
+    <Reference Include="libnetdroneunity_builtin_nocrypt_ccu30">
+      <HintPath>Assets\NetDroneUnity\Client\SDK\plugins\libnetdroneunity_builtin_nocrypt_ccu30.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\DB\ChannelInfoDbm.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\DB\DbData.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\DB\DbDataList.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\DB\DbMgr.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\DB\StageInfoDbm.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Defines.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Enums.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\ExampleAutoConnect.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\ExampleChat.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\ExampleMenu.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\ExampleRoom.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\ExampleWeb.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Framework.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\GlobalVariable.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\ConnectorEx.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Data\ID.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Data\INFO.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Data\OTHER.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Data\ROOM.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Data\USER.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Data\WEB.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\GameNetwork.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\ID.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\INFO.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Launcher.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\NetIO.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\NetMgr.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\NetworkEx.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\OTHER.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\ROOM.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Send\ID.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Send\INFO.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Send\ROOM.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Send\USER.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\Send\WEB.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\USER.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Net\WEB.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\State\State.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\State\StateChannel.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\State\StateEmpty.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\State\StateLobby.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\State\StateLogin.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\State\StateMgr.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\State\StateRoom.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\UI\TextMgr.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Unit\GamePlayer.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Unit\Player.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Unit\PlayerEx.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Unit\Provider.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Unit\Unit.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Unit\UnitData.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Unit\UnitMgr.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Util\CfgMgr.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Util\ConfigEx.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\Version.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\World\ChannelMgr.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\World\GameRoom.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\World\Room.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\World\RoomEx.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\World\RoomHandler.cs" />
+    <Compile Include="Assets\NetDroneUnity\Client\Scripts\World\WorldData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\NetDroneUnity\Client\Resources\Config\testclient-unity.txt" />
+    <None Include="Assets\NetDroneUnity\Client\Resources\Text\channelinfo.txt" />
+    <None Include="Assets\NetDroneUnity\Client\Resources\Text\stageinfo.txt" />
+    <None Include="Assets\NetDroneUnity\Docs\AUTHORS.txt" />
+    <None Include="Assets\NetDroneUnity\Docs\CHANGELOG.txt" />
+    <None Include="Assets\NetDroneUnity\Docs\LICENSE.txt" />
+    <None Include="Assets\NetDroneUnity\Docs\TODO.txt" />
+    <None Include="Assets\NetDroneUnity\Docs\english\INSTALL.txt" />
+    <None Include="Assets\NetDroneUnity\Docs\english\README.txt" />
+    <None Include="Assets\NetDroneUnity\Docs\korean\INSTALL.txt" />
+    <None Include="Assets\NetDroneUnity\Docs\korean\README.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
+</Project>

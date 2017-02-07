@@ -1,0 +1,40 @@
+﻿Changes with NetDrone Unity 1.2.3
+* Fixed Dns.GetHostName() ArgumentNullException
+
+Changes with NetDrone Unity 1.2.2
+* Version synchronization
+
+Changes with NetDrone Unity 1.2.1
+* Fixed Documents
+
+Changes with NetDrone Unity 1.2.0
+* Fixed WaitLogin, WaitRelogin, WaitReconnect
+* Fixed AutoFramework to GameFramework
+
+Changes with NetDrone Unity 1.1.0
+* Added ‘Reliable UDP’ function
+* Added ‘packet encryption’ function (RC5, RC6)
+* Wrote ‘NDP over HTTP’
+* Added ‘Multi-Thread’ function
+* Applied ‘Dispatcher structure’
+* Added ‘Allocator’ function
+* Applied ‘stack tracking function’ in OUTPUT and TRACE
+* Unified ‘instruction of C# and C++ API’
+* Wrote 'DummyClient' Tool
+* Wrote 'CryptTester' Tool
+* Wrote 'ReuseMemory' Tool
+* Wrote ‘C# server' and 'PHP server' examples
+
+Changes with NetDrone Unity 1.0.1
+* Add English translation documents
+
+Changes with NetDrone Unity 1.0.0
+* Apply Auto Framework design
+* Add Hierarchy indication functions: add GameObject that is created from Networks, Channels, Main State, Main Room, Main Player, and so on, when the example code runs
+* Write CSV loader
+* Write Data Converter
+* Write examples of channel and room
+* Write examples of chatting
+* Write examples of auto connection
+* Organise source code structures
+* Write docs/* documents
