@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB5359CA-C289-43AA-A708-92C5595A0B49}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StudyServer</RootNamespace>
+    <AssemblyName>studyserver</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;DISABLE_UNITY;_THREAD</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <DefineConstants>DISABLE_UNITY;_THREAD</DefineConstants>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\world\" />
+    <Folder Include="src\util\" />
+    <Folder Include="src\unit\" />
+    <Folder Include="src\net\" />
+    <Folder Include="src\db\" />
+    <Folder Include="src\net\data\" />
+    <Folder Include="docs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\db\DbData.cs" />
+    <Compile Include="src\net\data\ID.cs" />
+    <Compile Include="src\net\data\INFO.cs" />
+    <Compile Include="src\net\data\OTHER.cs" />
+    <Compile Include="src\net\data\ROOM.cs" />
+    <Compile Include="src\net\data\USER.cs" />
+    <Compile Include="src\net\ConnectorEx.cs" />
+    <Compile Include="src\net\ID.cs" />
+    <Compile Include="src\net\INFO.cs" />
+    <Compile Include="src\net\Launcher.cs" />
+    <Compile Include="src\net\ListenerEx.cs" />
+    <Compile Include="src\net\NetIO.cs" />
+    <Compile Include="src\net\NetMgr.cs" />
+    <Compile Include="src\net\NetworkEx.cs" />
+    <Compile Include="src\net\ROOM.cs" />
+    <Compile Include="src\net\USER.cs" />
+    <Compile Include="src\unit\Player.cs" />
+    <Compile Include="src\unit\PlayerEx.cs" />
+    <Compile Include="src\unit\Unit.cs" />
+    <Compile Include="src\unit\UnitData.cs" />
+    <Compile Include="src\unit\UnitMgr.cs" />
+    <Compile Include="src\util\CfgMgr.cs" />
+    <Compile Include="src\world\ChannelMgr.cs" />
+    <Compile Include="src\world\Room.cs" />
+    <Compile Include="src\world\RoomEx.cs" />
+    <Compile Include="src\world\RoomHandler.cs" />
+    <Compile Include="src\Defines.cs" />
+    <Compile Include="src\Enums.cs" />
+    <Compile Include="src\Framework.cs" />
+    <Compile Include="src\GlobalVariable.cs" />
+    <Compile Include="src\main.cs" />
+    <Compile Include="src\Version.cs" />
+    <Compile Include="src\world\Provider.cs" />
+    <Compile Include="src\unit\Provider.cs" />
+    <Compile Include="src\util\ConfigEx.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="libnetdroneunity_nocrypt_ccu30">
+      <HintPath>lib\libnetdroneunity_nocrypt_ccu30.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docs\studyserver-linux.txt" />
+    <None Include="docs\studyserver-windows.txt" />
+  </ItemGroup>
+</Project>

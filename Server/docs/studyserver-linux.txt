@@ -1,0 +1,11 @@
+[studyserver:100]
+DefaultInterface = eth0
+DefaultPort = 11000
+ReliableInterface = eth0
+ReliablePort = 11000
+BackboneInterface = eth0
+BackbonePort = 11001
+MaxConnection = 30
+HeaderCrypt = false
+LogPath = /tmp
+InfoPath = /tmp

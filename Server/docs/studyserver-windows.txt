@@ -1,0 +1,11 @@
+[studyserver:100]
+DefaultInterface = Realtek PCIe GBE Family Controller #2
+DefaultPort = 11000
+ReliableInterface = Realtek PCIe GBE Family Controller #2
+ReliablePort = 11000
+BackboneInterface = Realtek PCIe GBE Family Controller #2
+BackbonePort = 11001
+MaxConnection = 30
+HeaderCrypt = false
+LogPath = C:\Temp
+InfoPath = C:\Temp

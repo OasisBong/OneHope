@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{4B00A8C5-0396-6BDA-9A9C-FC9F89C072AA}</ProjectGuid>
+    <ProjectGuid>{81571F3B-E477-F4CF-4ADE-7D70E68F6915}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -107,16 +107,10 @@
      <Compile Include="Assets\NetDroneUnity\Client\Scripts\World\RoomEx.cs" />
      <Compile Include="Assets\NetDroneUnity\Client\Scripts\World\RoomHandler.cs" />
      <Compile Include="Assets\NetDroneUnity\Client\Scripts\World\WorldData.cs" />
-     <None Include="Assets\NetDroneUnity\Docs\korean\README.txt" />
-     <None Include="Assets\NetDroneUnity\Docs\TODO.txt" />
-     <None Include="Assets\NetDroneUnity\Docs\CHANGELOG.txt" />
-     <None Include="Assets\NetDroneUnity\Docs\AUTHORS.txt" />
-     <None Include="Assets\NetDroneUnity\Docs\english\README.txt" />
+     <Compile Include="Assets\Scripts\PlayerCamera.cs" />
+     <Compile Include="Assets\Scripts\PlayerMove.cs" />
      <None Include="Assets\NetDroneUnity\Client\Resources\Text\channelinfo.txt" />
      <None Include="Assets\NetDroneUnity\Client\Resources\Text\stageinfo.txt" />
-     <None Include="Assets\NetDroneUnity\Docs\korean\INSTALL.txt" />
-     <None Include="Assets\NetDroneUnity\Docs\english\INSTALL.txt" />
-     <None Include="Assets\NetDroneUnity\Docs\LICENSE.txt" />
      <None Include="Assets\NetDroneUnity\Client\Resources\Config\testclient-unity.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -137,7 +131,7 @@
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="libnetdroneunity_builtin_nocrypt_ccu30">
- <HintPath>C:/Users/jhw/Desktop/SmartClient-Demo_123/Assets/NetDroneUnity/Client/SDK/plugins/libnetdroneunity_builtin_nocrypt_ccu30.dll</HintPath>
+ <HintPath>C:/Users/jhw/Desktop/UnityGit/UnityPF/Assets/NetDroneUnity/Client/SDK/plugins/libnetdroneunity_builtin_nocrypt_ccu30.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
