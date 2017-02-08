@@ -109,7 +109,24 @@ namespace UnityEngine
             public static object New() { return new CPlayerEx(); }
 
             public GamePlayer outer = null;
-            public GameObject ActorObj = null;
+
+            //추가
+
+            public GameObject GetGameObject()
+            {
+                return ActorObj;
+            }
+
+            public void SetGameObject(GameObject o)
+            {
+                ActorObj = o;
+            }
+
+
+
+
+
+            GameObject ActorObj = null;
         }
     }
 }

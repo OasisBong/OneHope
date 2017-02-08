@@ -245,26 +245,6 @@ namespace UnityEngine {
 			}
 		}
 
-        public GameObject
-        GetGameObject()
-        {
-            if(isptr(inner))
-            {
-                return inner.ActorObj;
-            }
-
-            return null;
-        }
-
-        public void
-        SetGameObject(GameObject o)
-        {
-            if(isptr(inner))
-            {
-                inner.ActorObj = o;
-            }
-        }
-
 		public CPlayerEx	inner = null;
 
 	}

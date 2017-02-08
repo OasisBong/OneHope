@@ -64,9 +64,12 @@ namespace UnityEngine {
         CMD_USER_MOVE(CCommand kCommand_)
         {
             SUserMoveClToGs tRData = (SUserMoveClToGs)kCommand_.GetData(typeof(SUserMoveClToGs));
-
-            GameObject temp = g_kUnitMgr.FindPlayer(tRData.Key).GetGameObject();
-            temp.transform.Translate(Vector3.forward);
+            Vector3 temp = new Vector3();
+            temp.x = tRData.GetX();
+            temp.y = tRData.GetY();
+            temp.z = tRData.GetZ();
+           // g_kUnitMgr.GetPlayer(tRData.GetKey()).GetGameObject().transform.position = temp;
+            g_kUnitMgr.GetPlayer(tRData.GetKey()).inner.GetGameObject().transform.position = temp;
             return true;
         }
 

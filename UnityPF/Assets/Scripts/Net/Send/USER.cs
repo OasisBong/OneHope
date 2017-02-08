@@ -131,7 +131,9 @@ namespace UnityEngine
                 kCommand.SetExtra((UINT)EXTRA.OK);
 
                 SUserMoveClToGs tSData = new SUserMoveClToGs(true);
-                tSData.Key = kPlayer.GetKey();
+                tSData.SetKet(kPlayer.GetKey());
+               // tSData.SetPosition(kPlayer.GetGameObject().transform.position.x, kPlayer.GetGameObject().transform.position.y, kPlayer.GetGameObject().transform.position.z);
+                tSData.SetPosition(kPlayer.inner.GetGameObject().transform.position.x, kPlayer.inner.GetGameObject().transform.position.y, kPlayer.inner.GetGameObject().transform.position.z);
 
                 CRoomHandler kRoomHandler = kPlayer.GetRoomHandler();
                 if(isptr(kRoomHandler))

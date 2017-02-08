@@ -57,9 +57,21 @@ namespace UnityEngine {
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack =4)]
         public struct SUserMoveClToGs
         {
-            public SUserMoveClToGs(bool o) : this() { if (o) { Key = 0; } }
+            public SUserMoveClToGs(bool o) : this() { if (o) { Key = 0; x = 0f; y = 0f; z = 0f; } }
 
-            public UINT32 Key;
+            public UINT32   GetKey() { return Key; }
+            public void     SetKet(UINT32 o) { Key = o; }
+
+            public float GetX() { return x; }
+            public float GetY() { return y; }
+            public float GetZ() { return z; }
+            public void SetPosition(float _x, float _y, float _z) { x = _x; y = _y; z = _z; }
+
+            //==넘겨줄 데이터 선언==//
+            UINT32 Key;
+            float x;
+            float y;
+            float z;
         }
     }
 }

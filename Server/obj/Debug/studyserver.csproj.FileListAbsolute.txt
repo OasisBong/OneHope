@@ -4,3 +4,9 @@ C:\Users\jhw\Desktop\StudyServer-Demo_123\bin\Debug\libnetdroneunity_nocrypt_ccu
 C:\Users\jhw\Desktop\StudyServer-Demo_123\obj\Debug\studyserver.csprojResolveAssemblyReference.cache
 C:\Users\jhw\Desktop\StudyServer-Demo_123\obj\Debug\studyserver.exe
 C:\Users\jhw\Desktop\StudyServer-Demo_123\obj\Debug\studyserver.pdb
+C:\Users\jhw\Desktop\UnityGit\Server\obj\Debug\studyserver.exe
+C:\Users\jhw\Desktop\UnityGit\Server\obj\Debug\studyserver.pdb
+C:\Users\jhw\Desktop\UnityGit\Server\bin\Debug\studyserver.exe
+C:\Users\jhw\Desktop\UnityGit\Server\bin\Debug\studyserver.pdb
+C:\Users\jhw\Desktop\UnityGit\Server\bin\Debug\libnetdroneunity_nocrypt_ccu30.dll
+C:\Users\jhw\Desktop\UnityGit\Server\obj\Debug\studyserver.csprojResolveAssemblyReference.cache

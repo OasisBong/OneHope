@@ -19,14 +19,43 @@ Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityE
 Loading C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\libnetdroneunity_builtin_nocrypt_ccu30.dll (this message is harmless)
 Loading C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\libnetdroneunity_builtin_nocrypt_ccu30.dll into Unity Child Domain
-- Completed reload, in  0.032 seconds
+- Completed reload, in  0.038 seconds
 Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
 <RI> Input initialized.
 desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
 <RI> Initialized touch support.
-UnloadTime: 1.369333 ms
+Initialize engine version: 5.5.0f3 (38b4efef76f0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 530 (ID=0x191b)
+    Vendor:   Intel
+    VRAM:     1129 MB
+    Driver:   21.20.16.4552
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\libnetdroneunity_builtin_nocrypt_ccu30.dll (this message is harmless)
+Loading C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\libnetdroneunity_builtin_nocrypt_ccu30.dll into Unity Child Domain
+- Completed reload, in  0.042 seconds
+Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\jhw\Desktop\UnityGit\UnityPF\SMC_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 2.137777 ms
+UnloadTime: 1.634222 ms
 DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
  
 (Filename:  Line: 447)
@@ -83,7 +112,7 @@ poll create: max: 5
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-connector new: 3806367232
+connector new: 1559793152
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -91,19 +120,103 @@ connector new: 3806367232
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-connector new: 1479562112
+connector new: 3527955328
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-connector new: 3447724288
+connector new: 1201150208
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Register Poll: max: [1:21] in:[3447724288:0]
+Register Poll: max: [1:21] in:[1201150208:0]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-[0] listener OK: 3447724288 : 0.0.0.0 : 0
+[0] listener OK: 1201150208 : 0.0.0.0 : 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[ O  K ]: creating listener for slave service
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+poll create: max: 21
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[ O  K ]: initializing slave network
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+poll create: max: 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[ O  K ]: initializing master network
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+connector new: 3879767552
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[ O  K ]: creating connector for master service
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+connector new: 1552962432
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+connector new: 3521124608
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Register Poll: max: [1:21] in:[3521124608:0]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+[0] listener OK: 3521124608 : 0.0.0.0 : 0
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
@@ -112,12 +225,20 @@ Register Poll: max: [1:21] in:[3447724288:0]
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 14fc -> priority: 1 
+  Thread -> id: 7a4 -> priority: 1 
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 570 -> priority: 1 
 Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 4.728000 ms
+UnloadTime: 7.193777 ms
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 705.
-Total: 1.552888 ms (FindLiveObjects: 0.080888 ms CreateObjectMapping: 0.024000 ms MarkObjects: 1.364444 ms  DeleteObjects: 0.083111 ms)
+Total: 6.956444 ms (FindLiveObjects: 0.044888 ms CreateObjectMapping: 0.026666 ms MarkObjects: 2.344000 ms  DeleteObjects: 4.539555 ms)
+
+Unloading 7 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 8.251111 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 705.
+Total: 2.669777 ms (FindLiveObjects: 0.102222 ms CreateObjectMapping: 0.037777 ms MarkObjects: 2.380444 ms  DeleteObjects: 0.148444 ms)
 
 local address: 0.0.0.0, port: 0
  
@@ -127,9 +248,41 @@ remote address: 127.0.0.1, port: 11000
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-Register Poll: max: [1:5] in:[1479562112:1]
+Register Poll: max: [1:5] in:[1552962432:1]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+local address: 0.0.0.0, port: 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+remote address: 127.0.0.1, port: 11000
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Register Poll: max: [1:5] in:[3527955328:1]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
+
+DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
+ 
+(Filename:  Line: 447)
 
 DontDestroyOnLoad only work for root GameObjects or components on root GameObjects.
  
@@ -148,18 +301,50 @@ DontDestroyOnLoad only work for root GameObjects or components on root GameObjec
 (Filename:  Line: 447)
 
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 2.526222 ms
+UnloadTime: 3.984888 ms
 
 Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 464.
-Total: 1.515555 ms (FindLiveObjects: 0.060000 ms CreateObjectMapping: 0.017333 ms MarkObjects: 1.423555 ms  DeleteObjects: 0.013777 ms)
+Total: 2.067111 ms (FindLiveObjects: 0.049333 ms CreateObjectMapping: 0.022222 ms MarkObjects: 1.970666 ms  DeleteObjects: 0.023555 ms)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.767111 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 464.
+Total: 2.138666 ms (FindLiveObjects: 0.049777 ms CreateObjectMapping: 0.018222 ms MarkObjects: 2.050222 ms  DeleteObjects: 0.019555 ms)
 
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.371111 ms
+UnloadTime: 0.338222 ms
 
 Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 404.
-Total: 2.758222 ms (FindLiveObjects: 0.126666 ms CreateObjectMapping: 0.065333 ms MarkObjects: 2.508888 ms  DeleteObjects: 0.056000 ms)
+Total: 1.592000 ms (FindLiveObjects: 0.036888 ms CreateObjectMapping: 0.017333 ms MarkObjects: 1.479111 ms  DeleteObjects: 0.058222 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.334666 ms
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 404.
+Total: 1.714222 ms (FindLiveObjects: 0.051555 ms CreateObjectMapping: 0.015555 ms MarkObjects: 1.554666 ms  DeleteObjects: 0.090666 ms)
+
+SEND_ID_PING: NONE: bytes: 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+CMD_ID_PONG: OK: tick: 1841, delay: 0.01 sec, bytes: 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+SEND_ID_PING: NONE: bytes: 12
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+CMD_ID_PONG: OK: tick: 1928, delay: 0.00 sec, bytes: 20
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 [INVALID_SOCKET] shutdown failed: errno[NotConnected]
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Unregister Poll: max: [0:5] out:[1552962432:1]
  
 (Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 

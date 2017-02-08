@@ -129,16 +129,12 @@ namespace UnityEngine {
         public static bool
         CMD_USER_MOVE(CUnit kActor_, CCommand kCommand_)
         {
-            CPlayer kPlayer = (CPlayer)kActor_.GetTypeAs(UNIT_TYPE.UNIT_PLAYER);
-            if(isptr(kPlayer))
+            if(isptr(kActor_))
             {
-                if(0 < kPlayer.GetAid())
+                if(0 < kActor_.GetAid())
                 {
                     SUserMoveClToGs tRData = (SUserMoveClToGs)kCommand_.GetData(typeof(SUserMoveClToGs));
-                    kCommand_.SetOrder((UINT)PROTOCOL.USER_MOVE);
-                    kCommand_.SetExtra((UINT)EXTRA.OK);
-
-                    CRoomHandler kRoomHandler = kPlayer.GetRoomHandler();
+                    CRoomHandler kRoomHandler = kActor_.GetRoomHandler();
                     if(isptr(kRoomHandler))
                     {
                         CRoom kRoom = kRoomHandler.GetRoom();
@@ -147,6 +143,7 @@ namespace UnityEngine {
                             INT iSize = Marshal.SizeOf(tRData);
                             kCommand_.SetData(tRData, iSize);
                             kRoom.Broadcast(kCommand_, iSize, kActor_);
+                            return true;
                         }
                     }
                 }
