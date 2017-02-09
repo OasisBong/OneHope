@@ -145,10 +145,28 @@ namespace UnityEngine {
                             kRoom.Broadcast(kCommand_, iSize, kActor_);
                             return true;
                         }
+                        else
+                        {
+                            OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] Room is null: ");
+                        }
+                    }
+                    else
+                    {
+                        OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] RoomHandler is null: ");
                     }
                 }
+                else
+                {
+                    OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] Aid is 0: ");
+                }
+            }
+            else
+            {
+                OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] player is null: ");
             }
 
+            kActor_.Launcher(kCommand_);
+            kActor_.Disconnect();
             return true;
         }
 

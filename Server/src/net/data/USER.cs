@@ -67,7 +67,6 @@ namespace UnityEngine {
             public float GetZ() { return z; }
             public void SetPosition(float _x, float _y, float _z) { x = _x; y = _y; z = _z; }
 
-            //==넘겨줄 데이터 선언==//
             UINT32 Key;
             float x;
             float y;

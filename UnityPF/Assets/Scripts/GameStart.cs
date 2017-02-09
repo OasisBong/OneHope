@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameStart : GameFramework {
 
     public GameObject Playerobj;
+    public GameObject MainPlayerCamera;
 
     void Start()
     {
@@ -20,6 +21,11 @@ public class GameStart : GameFramework {
             {
                 Playerobj.tag = "MainPlayer";
                 g_kUnitMgr.GetMainPlayer().inner.SetGameObject(Instantiate(Playerobj));
+
+                Instantiate(MainPlayerCamera).transform.SetParent(g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform);
+                Vector3 temp = g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform.position;
+                MainPlayerCamera.transform.position = temp;
+                //카메라 위치 수정해야함
             }
             else
             {
