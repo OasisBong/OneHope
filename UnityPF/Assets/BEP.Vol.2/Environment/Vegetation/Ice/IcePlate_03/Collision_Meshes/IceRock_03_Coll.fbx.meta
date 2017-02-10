@@ -3,7 +3,12 @@ guid: 37624e210357e6f4887574bf500adf73
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: IcePlate_03_Coll
+    11100000: //RootNode
   materials:
     importMaterials: 0
     materialName: 0

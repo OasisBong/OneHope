@@ -3,8 +3,13 @@ guid: 086d70ebb7dcaac41ad4cdfcbbe32b0f
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: gstone_01_002
     4300002: GSW_02
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

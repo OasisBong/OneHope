@@ -3,8 +3,13 @@ guid: 695306c41ae91ac409083d7f0655a2bc
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: temple_ruin
     4300002: Temple_ruin
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

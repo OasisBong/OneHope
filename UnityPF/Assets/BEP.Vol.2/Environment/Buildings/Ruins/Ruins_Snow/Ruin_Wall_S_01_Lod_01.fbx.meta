@@ -3,8 +3,19 @@ guid: f4d6e5f4eee4fd140bb1488076875358
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: Ruin_Wall_01_Lod_01
+    100002: //RootNode
+    100004: Snow
+    400000: Ruin_Wall_01_Lod_01
+    400002: //RootNode
+    400004: Snow
+    2300000: Ruin_Wall_01_Lod_01
+    2300002: Snow
+    3300000: Ruin_Wall_01_Lod_01
+    3300002: Snow
     4300000: Ruin_Wall_01_Lod_01
     4300002: Snow
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

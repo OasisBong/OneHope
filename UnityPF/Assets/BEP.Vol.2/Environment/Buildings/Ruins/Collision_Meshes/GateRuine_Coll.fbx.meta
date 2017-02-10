@@ -3,9 +3,14 @@ guid: 3cb4aa91a5e47924c9d0b29ff83384e2
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: gate_ruin_Coll
     4300002: GateRuin_Coll
     4300004: GateRuin
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

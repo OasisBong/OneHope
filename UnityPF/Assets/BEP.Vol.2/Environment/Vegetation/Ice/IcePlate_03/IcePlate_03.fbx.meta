@@ -3,9 +3,14 @@ guid: 41c393b320f66174bafc0d15d66af056
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Mesh
     4300002: IceRock_03
     4300004: IcePlate_03
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

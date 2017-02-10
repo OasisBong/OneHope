@@ -3,7 +3,12 @@ guid: c41e43ad635aa864f8ec8dfc3d7223ea
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Bench_02_Coll
+    11100000: //RootNode
   materials:
     importMaterials: 0
     materialName: 0

@@ -3,8 +3,19 @@ guid: 171fed071d9c0a846a3948d72bf84a06
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: GateRuin
+    100002: //RootNode
+    100004: Snow
+    400000: GateRuin
+    400002: //RootNode
+    400004: Snow
+    2300000: GateRuin
+    2300002: Snow
+    3300000: GateRuin
+    3300002: Snow
     4300000: Snow
     4300002: GateRuin
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

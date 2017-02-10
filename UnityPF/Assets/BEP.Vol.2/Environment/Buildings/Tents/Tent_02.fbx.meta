@@ -3,8 +3,19 @@ guid: dbef0171dde40fa4797ce1104bfcba51
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: Brenches_Knot
+    100002: //RootNode
+    100004: Tent_02
+    400000: Brenches_Knot
+    400002: //RootNode
+    400004: Tent_02
+    2300000: Brenches_Knot
+    2300002: Tent_02
+    3300000: Brenches_Knot
+    3300002: Tent_02
     4300000: Brenches_Knot
     4300002: Tent_02
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

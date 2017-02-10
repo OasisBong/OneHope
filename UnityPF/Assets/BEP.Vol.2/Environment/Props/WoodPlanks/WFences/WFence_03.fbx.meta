@@ -3,7 +3,12 @@ guid: 82b80b59e65b9d3438ad66c9b7445aa2
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Fence_03
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

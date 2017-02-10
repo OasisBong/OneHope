@@ -3,7 +3,12 @@ guid: bf6b231dd90fa4a4cb3cea81ef46cb38
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Lavender_02_a
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

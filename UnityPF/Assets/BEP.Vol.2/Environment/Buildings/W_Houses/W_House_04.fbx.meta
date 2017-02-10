@@ -3,10 +3,29 @@ guid: c1537e0e670a31a4d86346363ccb13f6
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: W_House_04_Planks
+    100004: W_House_04_Roof
+    100006: W_House_04_Stone
+    100008: W_House_04_Wall
+    400000: //RootNode
+    400002: W_House_04_Planks
+    400004: W_House_04_Roof
+    400006: W_House_04_Stone
+    400008: W_House_04_Wall
+    2300000: W_House_04_Planks
+    2300002: W_House_04_Roof
+    2300004: W_House_04_Stone
+    2300006: W_House_04_Wall
+    3300000: W_House_04_Planks
+    3300002: W_House_04_Roof
+    3300004: W_House_04_Stone
+    3300006: W_House_04_Wall
     4300000: W_House_04_Roof
     4300002: W_House_04_Wall
     4300004: W_House_04_Stone
     4300006: W_House_04_Planks
+    11100000: //RootNode
   materials:
     importMaterials: 0
     materialName: 0

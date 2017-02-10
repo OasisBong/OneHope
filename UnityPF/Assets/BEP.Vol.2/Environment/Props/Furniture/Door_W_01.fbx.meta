@@ -3,7 +3,12 @@ guid: 14fbf18d717f46349b85d30860c701e4
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Door_01_W
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

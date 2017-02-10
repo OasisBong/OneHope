@@ -3,7 +3,12 @@ guid: 19e925e2e41fadb43bf5df249b55ed31
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: chip_stone_03
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

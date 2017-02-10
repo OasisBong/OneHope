@@ -3,10 +3,15 @@ guid: 7da3a2433b507d840929fac2c70d0ccc
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: gate_ruin
     4300002: Mesh_002
     4300004: GateRuin
     4300006: Cube
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

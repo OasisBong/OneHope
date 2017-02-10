@@ -3,10 +3,21 @@ guid: 81ecffa1a50e211429b202cebb881253
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: Lantern_01
+    100004: Leather_01
+    400000: //RootNode
+    400002: Lantern_01
+    400004: Leather_01
+    2300000: Lantern_01
+    2300002: Leather_01
+    3300000: Lantern_01
+    3300002: Leather_01
     4300000: Leather
     4300002: Lantern
     4300004: Leather_01
     4300006: Lantern_01
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

@@ -3,7 +3,12 @@ guid: d065ab96aacd0784f982c5abd4a38d23
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Chicken_Joint
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

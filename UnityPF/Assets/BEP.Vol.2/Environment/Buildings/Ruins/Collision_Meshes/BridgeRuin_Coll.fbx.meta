@@ -3,7 +3,12 @@ guid: b56bd5cfe8870714a948550deb5522ff
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: bridge_ruin_Coll
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

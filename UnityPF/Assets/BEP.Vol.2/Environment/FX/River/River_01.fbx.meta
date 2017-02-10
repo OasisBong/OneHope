@@ -3,6 +3,10 @@ guid: 2cd74f5284dbf854aa3a33043b96fa64
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: River_01
     4300002: Mesh_MeshPart0
     4300004: Mesh_MeshPart1
@@ -13,6 +17,7 @@ ModelImporter:
     4300014: Mesh_MeshPart6
     4300016: Mesh_MeshPart7
     4300018: Mesh_MeshPart8
+    11100000: //RootNode
   materials:
     importMaterials: 0
     materialName: 0

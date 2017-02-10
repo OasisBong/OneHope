@@ -3,8 +3,13 @@ guid: 3e9e12c2b4e78aa4e9336b63163a9027
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Group47025
     4300002: Terrain_Occluder
+    11100000: //RootNode
   materials:
     importMaterials: 0
     materialName: 0
