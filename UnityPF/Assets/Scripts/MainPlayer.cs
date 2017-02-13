@@ -25,25 +25,26 @@ public class MainPlayer : GameFramework
     {
         if (Input.GetKey(KeyCode.W))
         {
-            Player_Forward();
+            //Player_Forward();
             SEND_USER_MOVE(g_kUnitMgr.GetMainPlayer().GetKey());
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            Player_Back();
+            //Player_Back();
             SEND_USER_MOVE(g_kUnitMgr.GetMainPlayer().GetKey());
         }
 
         if (Input.GetKey(KeyCode.A))
         {
-            Player_Right();
+            //Player_Right();
             SEND_USER_MOVE(g_kUnitMgr.GetMainPlayer().GetKey());
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            Player_Left();
+            //Player_Left();
             SEND_USER_MOVE(g_kUnitMgr.GetMainPlayer().GetKey());
         }
+        
     }
 
     public void Player_Forward()
