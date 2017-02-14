@@ -185,6 +185,7 @@
     <None Include="Assets\BEP.Vol.2\Standard Assets\Water (Pro Only)\Water4\Sources\Shaders\WaterInclude.cginc" />
     <None Include="Assets\BuildList\Campfire\License.txt" />
     <None Include="Assets\BuildList\Impossible.shader" />
+    <None Include="Assets\InventoryMaster\readme.txt" />
     <None Include="Assets\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
     <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
     <None Include="Assets\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
@@ -223,6 +224,12 @@
     <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
+    <None Include="Assets\Time Of Day System Free\Documentation\ChangeLog.txt" />
+    <None Include="Assets\Time Of Day System Free\LICENSE.txt" />
+    <None Include="Assets\Time Of Day System Free\Shaders\Readme.txt" />
+    <None Include="Assets\Time Of Day System Free\Shaders\SkyboxProceduralInclude.cginc" />
+    <None Include="Assets\Time Of Day System Free\Shaders\Unity-Custom-Skybox-Procedural.shader" />
+    <None Include="Assets\Time Of Day System Free\WIP\Simple Clouds Dome\Clouds.shader" />
     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_akarami_blend.shader" />
     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye.shader" />
     <None Include="Assets\UnityChan\Models\UnityChanShader\Shader\Unitychan_chara_eye_blend.shader" />

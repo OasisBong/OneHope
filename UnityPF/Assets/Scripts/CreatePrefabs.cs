@@ -62,11 +62,13 @@ public class CreatePrefabs : MonoBehaviour {
             m_createObj.transform.Rotate(Vector3.up, -2.0f);
         else if (Input.GetKey(KeyCode.E))
             m_createObj.transform.Rotate(Vector3.up, 2.0f);
-        
+
+        bool impossible = false;
         //기울기체크
         if(!this.PosDecide())
         {
             m_createObj.GetComponentInChildren<MeshRenderer>().material.shader = redShader;
+            impossible = true;
         }
         else
         {
@@ -74,7 +76,7 @@ public class CreatePrefabs : MonoBehaviour {
         }
 
         //클릭시 생성
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0) && !impossible)
         {
             //충돌처리 활성화
             BoxCollider col = m_createObj.GetComponent<BoxCollider>();

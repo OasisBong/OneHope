@@ -6,6 +6,7 @@ public class FireLightScript : MonoBehaviour
 	public float maxIntensity = 0.5f;
 
 	public Light fireLight;
+    public GameObject[] Particles;
 
 	float random;
 
@@ -15,4 +16,21 @@ public class FireLightScript : MonoBehaviour
 		float noise = Mathf.PerlinNoise(random, Time.time);
 		fireLight.GetComponent<Light>().intensity = Mathf.Lerp(minIntensity, maxIntensity, noise);
 	}
+
+    public void LightOn()
+    {
+        fireLight.enabled = true;
+        for (int i = 0; i < 3; i++)
+        {
+            Particles[i].SetActive(true);
+        }
+    }
+    public void LightOff()
+    {
+        fireLight.enabled = false;
+        for (int i = 0; i < 3; i++)
+        {
+            Particles[i].SetActive(false);
+        }
+    }
 }
