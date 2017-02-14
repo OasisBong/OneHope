@@ -122,10 +122,10 @@ namespace UnityEngine {
 				kCommand.SetExtra((UINT)EXTRA.NONE);
 
 				if(0 > g_kNetMgr.Send(kCommand)) {
-					MESSAGE("SEND_ID_PING: sending failed: ");
+					//MESSAGE("SEND_ID_PING: sending failed: ");
 					return false;
 				}
-				MESSAGE("SEND_ID_PING: NONE: bytes: " + (iTCP_PACKET_HEAD_SIZE + iCOMMAND_HEAD_SIZE));
+				//MESSAGE("SEND_ID_PING: NONE: bytes: " + (iTCP_PACKET_HEAD_SIZE + iCOMMAND_HEAD_SIZE));
 			}
 			return true;
 		}

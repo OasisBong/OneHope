@@ -198,6 +198,7 @@ namespace UnityEngine {
 			STATE_CHANNEL,
 			STATE_LOBBY,
 			STATE_ROOM,
+            STATE_GAME,
 			STATE_NONE,
 			STATE_MAX = STATE_NONE
 		}

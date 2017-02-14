@@ -62,6 +62,7 @@ namespace UnityEngine {
 					m_kList[(INT)(STATE_TYPE.STATE_CHANNEL)] = new CStateChannel();
 					m_kList[(INT)(STATE_TYPE.STATE_LOBBY)] = new CStateLobby();
 					m_kList[(INT)(STATE_TYPE.STATE_ROOM)] = new CStateRoom();
+                    m_kList[(INT)(STATE_TYPE.STATE_GAME)] = new CStateGame();
 
 					for(INT i = 0; i < (INT)(STATE_TYPE.STATE_MAX); ++i) {
 						if(isptr(m_kList[i])) {

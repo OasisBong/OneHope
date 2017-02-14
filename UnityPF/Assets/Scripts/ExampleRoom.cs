@@ -156,15 +156,19 @@ namespace UnityEngine
                     {
                         if (g_kChannelMgr.GetMainRoom().IsDoing())
                         {
+                            //이부분에서 씬 넘겨주자!
                             m_kGameButton.GetComponentInChildren<Text>().text = "Stop";
                             m_kGameButton.interactable = true;
+
+                            g_kStateMgr.SetTransition(STATE_TYPE.STATE_GAME);
+                            Application.LoadLevel((INT)SCENE_TYPE.SCENE_MAIN_GAME);
                         }
                         else
                         {
                             m_kGameButton.GetComponentInChildren<Text>().text = "Start";
 
                             bool bCheck = true;
-                            if (1 < g_kChannelMgr.GetMainRoom().GetTopCount())
+                            if (0 < g_kChannelMgr.GetMainRoom().GetTopCount())
                             {
                                 for (UINT i = 0; i < (UINT)g_kChannelMgr.GetMainRoom().GetTopCount(); ++i)
                                 {

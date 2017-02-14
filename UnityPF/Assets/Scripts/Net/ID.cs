@@ -136,7 +136,7 @@ namespace UnityEngine {
 					}
 				}
 
-				MESSAGE("CMD_ID_PONG: OK: tick: " + tRData.tick + ", delay: " + String.Format("{0:F2}", fDelaySec) + " sec, bytes: " + (iTCP_PACKET_HEAD_SIZE + iCOMMAND_HEAD_SIZE + Marshal.SizeOf(tRData)));
+				//MESSAGE("CMD_ID_PONG: OK: tick: " + tRData.tick + ", delay: " + String.Format("{0:F2}", fDelaySec) + " sec, bytes: " + (iTCP_PACKET_HEAD_SIZE + iCOMMAND_HEAD_SIZE + Marshal.SizeOf(tRData)));
 			}
 			return true;
 		}

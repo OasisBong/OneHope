@@ -92,12 +92,6 @@ namespace UnityEngine {
 			Application.Quit();
 		}
 
-        public void
-        OnGameMain()
-        {
-            Application.LoadLevel((INT)SCENE_TYPE.SCENE_MAIN_GAME);
-        }
-
 		//
 		// Member Variables
 		//
@@ -105,7 +99,6 @@ namespace UnityEngine {
 		public Button		m_kChatButton;
 		public Button		m_kRoomButton;
 		public Button		m_kCloseButton;
-        public Button       m_kGameMain;
 
 	}
 }
