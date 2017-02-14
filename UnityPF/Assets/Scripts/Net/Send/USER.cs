@@ -121,7 +121,7 @@ namespace UnityEngine
         }
 
         public static bool
-        SEND_USER_MOVE(UINT PlayerKey)
+        SEND_USER_MOVE()
         {
             GamePlayer kPlayer = g_kUnitMgr.GetMainPlayer();
             if(isptr(kPlayer))
@@ -154,7 +154,7 @@ namespace UnityEngine
             }
             else
             {
-                MESSAGE("SEND_USER_MOVE: null is Player: PlayerKey =" + PlayerKey);
+                MESSAGE("SEND_USER_MOVE: ");
             }
             return true;
         }

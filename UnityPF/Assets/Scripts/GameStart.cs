@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameStart : GameFramework {
 
-    public GameObject Playerobj;
-    public GameObject MainPlayerCamera;
+    public GameObject MainPlayerObj;
+    public GameObject PlayerObj;
 
     void Start()
     {
@@ -13,24 +13,22 @@ public class GameStart : GameFramework {
         {
             g_kStateMgr.SetTransition(STATE_TYPE.STATE_GAME);
         }
+
+        MainPlayerObj.tag = "MainPlayer";
+        g_kUnitMgr.GetMainPlayer().inner.SetGameObject(MainPlayerObj);
+
         uint count = g_kUnitMgr.GetMainPlayer().GetRoomHandler().GetRoom().GetTopCount();
 
         for(uint i = 0; i < count; i++)
         {
             if(g_kUnitMgr.GetMainPlayer().GetRoomHandler().GetRoom().GetMember(i).GetKey() == g_kUnitMgr.GetMainPlayer().GetKey())
             {
-                Playerobj.tag = "MainPlayer";
-                g_kUnitMgr.GetMainPlayer().inner.SetGameObject(Playerobj);
-
-               // MainPlayerCamera.transform.SetParent(g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform);
-                Vector3 temp = g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform.position;
-                MainPlayerCamera.transform.position = temp;
-                //카메라 위치 수정해야함
+                continue;
             }
             else
             {
-                Playerobj.tag = "Player";
-                g_kUnitMgr.GetPlayer(g_kUnitMgr.GetMainPlayer().GetRoomHandler().GetRoom().GetMember(i).GetKey()).inner.SetGameObject(Instantiate(Playerobj));
+                PlayerObj.tag = "Player";
+                g_kUnitMgr.GetPlayer(g_kUnitMgr.GetMainPlayer().GetRoomHandler().GetRoom().GetMember(i).GetKey()).inner.SetGameObject(Instantiate(PlayerObj));
             }
         }
     }

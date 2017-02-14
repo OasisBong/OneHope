@@ -122,10 +122,6 @@ namespace UnityEngine
                 ActorObj = o;
             }
 
-
-
-
-
             GameObject ActorObj = null;
         }
     }

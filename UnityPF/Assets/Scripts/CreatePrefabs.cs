@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CreatePrefabs : MonoBehaviour {
+public class CreatePrefabs : GameFramework {
 
     GameObject m_buildObj = null;    //만들 오브젝트
     Material m_buildMtl = null;             //만들 오브젝트의 원 마테리얼
