@@ -9,9 +9,9 @@ public class GameStart : GameFramework {
 
     void Start()
     {
-        if(g_kStateMgr.GetTransitionType() != STATE_TYPE.STATE_ROOM)
+        if(g_kStateMgr.GetTransitionType() != STATE_TYPE.STATE_GAME)
         {
-            g_kStateMgr.SetTransition(STATE_TYPE.STATE_ROOM);
+            g_kStateMgr.SetTransition(STATE_TYPE.STATE_GAME);
         }
         uint count = g_kUnitMgr.GetMainPlayer().GetRoomHandler().GetRoom().GetTopCount();
 
@@ -20,9 +20,9 @@ public class GameStart : GameFramework {
             if(g_kUnitMgr.GetMainPlayer().GetRoomHandler().GetRoom().GetMember(i).GetKey() == g_kUnitMgr.GetMainPlayer().GetKey())
             {
                 Playerobj.tag = "MainPlayer";
-                g_kUnitMgr.GetMainPlayer().inner.SetGameObject(Instantiate(Playerobj));
+                g_kUnitMgr.GetMainPlayer().inner.SetGameObject(Playerobj);
 
-                Instantiate(MainPlayerCamera).transform.SetParent(g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform);
+               // MainPlayerCamera.transform.SetParent(g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform);
                 Vector3 temp = g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform.position;
                 MainPlayerCamera.transform.position = temp;
                 //카메라 위치 수정해야함
