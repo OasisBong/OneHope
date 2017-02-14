@@ -156,12 +156,8 @@ namespace UnityEngine
                     {
                         if (g_kChannelMgr.GetMainRoom().IsDoing())
                         {
-                            //이부분에서 씬 넘겨주자!
                             m_kGameButton.GetComponentInChildren<Text>().text = "Stop";
                             m_kGameButton.interactable = true;
-
-                            g_kStateMgr.SetTransition(STATE_TYPE.STATE_GAME);
-                            Application.LoadLevel((INT)SCENE_TYPE.SCENE_MAIN_GAME);
                         }
                         else
                         {

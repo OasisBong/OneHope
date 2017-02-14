@@ -139,7 +139,10 @@ namespace UnityEngine {
 				REFRESH_MEMBER_LIST();
 
 				MESSAGE("CMD_ROOM_START: OK: bytes: " + (iTCP_PACKET_HEAD_SIZE + iCOMMAND_HEAD_SIZE));
-			} else if(EXTRA.NEW == (EXTRA)kCommand_.GetExtra()) {
+
+                g_kStateMgr.SetTransition(STATE_TYPE.STATE_GAME);
+                Application.LoadLevel((INT)SCENE_TYPE.SCENE_MAIN_GAME);
+            } else if(EXTRA.NEW == (EXTRA)kCommand_.GetExtra()) {
 				// 난입 플레이어 본인.
 				g_kUnitMgr.GetMainPlayer().SetStatus(STATUS_TYPE.STATUS_NORMAL);
 
@@ -428,7 +431,10 @@ namespace UnityEngine {
 							}
 						}
 
-						REFRESH_MEMBER_LIST();
+                        g_kStateMgr.SetTransition(STATE_TYPE.STATE_GAME);
+                        Application.LoadLevel((INT)SCENE_TYPE.SCENE_MAIN_GAME);
+
+                        REFRESH_MEMBER_LIST();
 
 						MESSAGE("CMD_ROOM_START_OTHER: OK: leader: " + tRData.actor + ", bytes: " + (iTCP_PACKET_HEAD_SIZE + iCOMMAND_HEAD_SIZE + (Marshal.SizeOf(tRData))));
 					}

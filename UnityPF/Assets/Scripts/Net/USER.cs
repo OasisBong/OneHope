@@ -68,7 +68,6 @@ namespace UnityEngine {
             temp.x = tRData.GetX();
             temp.y = tRData.GetY();
             temp.z = tRData.GetZ();
-           // g_kUnitMgr.GetPlayer(tRData.GetKey()).GetGameObject().transform.position = temp;
             g_kUnitMgr.GetPlayer(tRData.GetKey()).inner.GetGameObject().transform.position = temp;
             return true;
         }
