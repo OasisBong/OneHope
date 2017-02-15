@@ -12,6 +12,8 @@ public class CreatePrefabs : GameFramework {
     
     GameObject m_createObj = null;          //위치조정때 쓰일 보여주기식
     bool isCreating = false;                //만들겠다고 위치조정 중인지
+
+    public UISprite FbtnImage;
     // Use this for initialization
     void Start ()
     {
@@ -29,9 +31,64 @@ public class CreatePrefabs : GameFramework {
         //    m_createObj.transform.position = new Vector3(0f, -500f, 0f);
         //}
 
+        //오브젝트 생성
         if (isCreating)
             CreateObject();
+        else
+        {
+            CheckObject();
+        }
+        //오브젝트 활성화
+        
 	}
+    
+
+    //=======================#  오브젝트 상호작용 #==========================
+
+    void CheckObject()
+    {
+        Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
+        RaycastHit[] rhit;
+
+        rhit = Physics.RaycastAll(ray, 10f);
+        float minLength = 10.0f;
+        int Number = -1;
+        for (int i = 0; i < rhit.Length; i++)
+        {
+            if ("ActiveObj" == rhit[i].collider.tag)
+            {
+                if (rhit[i].distance < minLength)
+                {
+                    minLength = rhit[i].distance;
+                    Number = i;
+                }
+            }
+        }
+
+        if (Number < 0)
+        {
+            FbtnImage.enabled = false;
+            return;
+        }
+
+        FbtnImage.enabled = true;
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            ActiveObjInfo info = rhit[Number].collider.GetComponentInChildren<ActiveObjInfo>();
+            if (info == null) info = rhit[Number].collider.GetComponent<ActiveObjInfo>();
+
+            info.OnActive();
+        }
+    }
+
+    //==========================================================================
+
+
+
+
+
+    //==========================#  오브젝트 생성  #=============================
+
     void CreateObject()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
@@ -64,8 +121,10 @@ public class CreatePrefabs : GameFramework {
             m_createObj.transform.Rotate(Vector3.up, 2.0f);
 
         bool impossible = false;
-        //기울기체크
-        if(!this.PosDecide())
+
+
+        //기울기체크 , 다른 오브젝트와 충돌 체크
+        if(!this.PosDecide() || !m_createObj.GetComponentInChildren<ActiveObjInfo>().CheckBuildPos())
         {
             m_createObj.GetComponentInChildren<MeshRenderer>().material.shader = redShader;
             impossible = true;
@@ -169,5 +228,6 @@ public class CreatePrefabs : GameFramework {
     public void OnCreateStart()
     {
     }
-    
+
+    //==========================================================================
 }

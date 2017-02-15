@@ -15,6 +15,11 @@ public class FireLightScript : MonoBehaviour
 		random = Random.Range(0.0f, 150.0f);
 		float noise = Mathf.PerlinNoise(random, Time.time);
 		fireLight.GetComponent<Light>().intensity = Mathf.Lerp(minIntensity, maxIntensity, noise);
+
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            fireLight.enabled = true;
+        }
 	}
 
     public void LightOn()
