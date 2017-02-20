@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CreatePrefabs : GameFramework {
+    
 
     GameObject m_buildObj = null;    //만들 오브젝트
     Material m_buildMtl = null;             //만들 오브젝트의 원 마테리얼
@@ -223,6 +224,8 @@ public class CreatePrefabs : GameFramework {
         isCreating = true;
         m_createObj = Instantiate(m_buildObj);
         m_createObj.transform.position = new Vector3(0f, -500f, 0f);
+
+
     }
 
     public void OnCreateStart()
