@@ -67,8 +67,10 @@ namespace UnityEngine {
 			USER_STATUS,
 			USER_CHAT,
             USER_MOVE,
+            USER_CREATE_OBJ,
 
-			OTHER_STATUS,
+
+            OTHER_STATUS,
 			OTHER_CHAT,
 			PROTOCOL_COMMON_END,
 

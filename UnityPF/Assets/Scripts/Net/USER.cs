@@ -72,12 +72,24 @@ namespace UnityEngine {
             return true;
         }
 
-		public static void
+        public static bool
+        CME_USER_CREATE_OBJ(CCommand kCommand_)
+        {
+            SUserCreateObj tRData = (SUserCreateObj)kCommand_.GetData(typeof(SUserCreateObj));
+
+            Vector3 temp = new Vector3();
+            temp.Set(tRData.GetX(), tRData.GetY(), tRData.GetZ());
+            GameObject.Find("CreateManager").GetComponent<SendCreateobj>().Createobj(Encoding.Default.GetString(tRData.GetName()), temp);
+            return true;
+        }
+
+        public static void
 		InitializeUserCommand() {
 			g_bfNativeLauncher[(INT)(PROTOCOL.USER_STATUS)] = new NativeLauncher(CMD_USER_STATUS);
 			g_bfNativeLauncher[(INT)(PROTOCOL.USER_CHAT)] = new NativeLauncher(CMD_USER_CHAT);
             g_bfNativeLauncher[(INT)(PROTOCOL.USER_MOVE)] = new NativeLauncher(CMD_USER_MOVE);
-		}
+            g_bfNativeLauncher[(INT)(PROTOCOL.USER_CREATE_OBJ)] = new NativeLauncher(CME_USER_CREATE_OBJ);
+        }
 	}
 }
 

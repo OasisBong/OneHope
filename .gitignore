@@ -4,3 +4,11 @@
 /Server/.vs
 /Server/bin
 /Server/obj
+/UnityPF/Temp
+/UnityPF/*.csproj
+/UnityPF/*.sln
+/UnityPF/*.unityproj
+/UnityPF/*.user
+/UnityPF/*.userprefs
+/UnityPF/*.pidb
+/UnityPF/*.suo

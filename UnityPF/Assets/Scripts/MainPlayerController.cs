@@ -64,7 +64,7 @@ public class MainPlayerController : GameFramework
 
         if(isptr(g_kUnitMgr.GetMainPlayer()))
         {
-            m_TempPosition = g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform.position;
+            m_TempPosition = this.transform.position;
         }
         else
         {
@@ -97,36 +97,10 @@ public class MainPlayerController : GameFramework
 
         m_PreviouslyGrounded = m_CharacterController.isGrounded;
 
-        if (m_TempPosition != g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform.position)
+        if (m_TempPosition != this.transform.position)
         {
             SEND_USER_MOVE();
-            m_TempPosition = g_kUnitMgr.GetMainPlayer().inner.GetGameObject().transform.position;
-        }
-        //Move();
-    }
-
-    void Move()
-    {
-        if(Input.GetKey(KeyCode.W))
-        {
-            this.transform.Translate(Vector3.forward);
-            SEND_USER_MOVE();
-        }
-        else if(Input.GetKey(KeyCode.S))
-        {
-            this.transform.Translate(Vector3.back);
-            SEND_USER_MOVE();
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            this.transform.Translate(Vector3.left);
-            SEND_USER_MOVE();
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            this.transform.Translate(Vector3.right);
-            SEND_USER_MOVE();
+            m_TempPosition = this.transform.position;
         }
     }
 

@@ -170,13 +170,58 @@ namespace UnityEngine {
             return true;
         }
 
+        public static bool
+        CME_USER_CREATE_OBJ(CUnit kActor_, CCommand kCommand_)
+        {
+            if (isptr(kActor_))
+            {
+                if (0 < kActor_.GetAid())
+                {
+                    SUserCreateObj tRData = (SUserCreateObj)kCommand_.GetData(typeof(SUserCreateObj));
+                    CRoomHandler kRoomHandler = kActor_.GetRoomHandler();
+                    if (isptr(kRoomHandler))
+                    {
+                        CRoom kRoom = kRoomHandler.GetRoom();
+                        if (isptr(kRoom))
+                        {
+                            INT iSize = Marshal.SizeOf(tRData);
+                            kCommand_.SetData(tRData, iSize);
+                            kRoom.Broadcast(kCommand_, iSize);
+                            return true;
+                        }
+                        else
+                        {
+                            OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] Room is null: ");
+                        }
+                    }
+                    else
+                    {
+                        OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] RoomHandler is null: ");
+                    }
+                }
+                else
+                {
+                    OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] Aid is 0: ");
+                }
+            }
+            else
+            {
+                OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] player is null: ");
+            }
+
+            kActor_.Launcher(kCommand_);
+            kActor_.Disconnect();
+            return true;
+        }
+
 
         public static void
 		InitializeUserCommand() {
 			g_bfNativeLauncher[(INT)(PROTOCOL.USER_STATUS)] = new NativeLauncher(CMD_USER_STATUS);
 			g_bfNativeLauncher[(INT)(PROTOCOL.USER_CHAT)] = new NativeLauncher(CMD_USER_CHAT);
             g_bfNativeLauncher[(INT)(PROTOCOL.USER_MOVE)] = new NativeLauncher(CMD_USER_MOVE);
-		}
+            g_bfNativeLauncher[(INT)(PROTOCOL.USER_CREATE_OBJ)] = new NativeLauncher(CME_USER_CREATE_OBJ);
+        }
 	}
 }
 

@@ -72,6 +72,28 @@ namespace UnityEngine {
             float y;
             float z;
         }
+
+        [Serializable]
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
+        public struct SUserCreateObj
+        {
+            public SUserCreateObj(bool o) : this() { if (o) { name = new CHAR[iMAX_CHAT_LEN + 1]; x = 0f; y = 0f; z = 0f; } }
+
+            public CHAR[] GetName() { INT iOffset = 0; for (UINT i = 0; i < name.Length; ++i) { ++iOffset; if ((CHAR)('\0') == name[i]) break; } Array.Clear(name, iOffset, name.Length - iOffset); return name; }
+            public void SetName(CHAR[] o) { INT iLength = o.Length; if (iMAX_CHAT_LEN < iLength) { iLength = iMAX_CHAT_LEN; } Array.Copy(o, 0, name, 0, iLength); name[iMAX_CHAT_LEN] = (CHAR)('\0'); }
+
+            public float GetX() { return x; }
+            public float GetY() { return y; }
+            public float GetZ() { return z; }
+            public void SetPosition(float _x, float _y, float _z) { x = _x; y = _y; z = _z; }
+            //==넘겨줄 데이터 선언==//
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = iMAX_CHAT_LEN + 1)]
+            CHAR[] name;
+
+            float x;
+            float y;
+            float z;
+        }
     }
 }
 /* EOF */

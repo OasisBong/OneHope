@@ -142,6 +142,8 @@ public class CreatePrefabs : GameFramework {
             if(col != null) col.enabled = true;
             else m_createObj.GetComponentInChildren<BoxCollider>().enabled = true;
 
+            SEND_USER_CREATE_OBJ(m_createObj.name, m_createObj.transform.position);
+
             isCreating = false;
             m_buildMtl = null;
             m_createObj = null;
@@ -223,6 +225,7 @@ public class CreatePrefabs : GameFramework {
         isCreating = true;
         m_createObj = Instantiate(m_buildObj);
         m_createObj.transform.position = new Vector3(0f, -500f, 0f);
+        m_createObj.name = m_buildObj.name;
     }
 
     public void OnCreateStart()

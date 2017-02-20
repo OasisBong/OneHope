@@ -132,7 +132,6 @@ namespace UnityEngine
 
                 SUserMoveClToGs tSData = new SUserMoveClToGs(true);
                 tSData.SetKet(kPlayer.GetKey());
-               // tSData.SetPosition(kPlayer.GetGameObject().transform.position.x, kPlayer.GetGameObject().transform.position.y, kPlayer.GetGameObject().transform.position.z);
                 tSData.SetPosition(kPlayer.inner.GetGameObject().transform.position.x, kPlayer.inner.GetGameObject().transform.position.y, kPlayer.inner.GetGameObject().transform.position.z);
 
                 CRoomHandler kRoomHandler = kPlayer.GetRoomHandler();
@@ -150,6 +149,16 @@ namespace UnityEngine
                             return false;
                         }
                     }
+                    else
+                    {
+                        MESSAGE("SEND_USER_MOVE: Room is null: ");
+                        return false;
+                    }
+                }
+                else
+                {
+                    MESSAGE("SEND_USER_MOVE: RoomHandler is null: ");
+                    return false;
                 }
             }
             else
@@ -158,6 +167,51 @@ namespace UnityEngine
             }
             return true;
         }
+
+        public static bool
+        SEND_USER_CREATE_OBJ(string name, Vector3 objPosition)
+        {
+            GamePlayer kPlayer = g_kUnitMgr.GetMainPlayer();
+            if(isptr(kPlayer))
+            {
+                CCommand kCommand = new CCommand();
+                kCommand.SetOrder((UINT)PROTOCOL.USER_CREATE_OBJ);
+                kCommand.SetExtra((UINT)EXTRA.OK);
+
+                SUserCreateObj tSData = new SUserCreateObj(true);
+                tSData.SetPosition(objPosition.x, objPosition.y, objPosition.z);
+                tSData.SetName(Encoding.UTF8.GetBytes(name));
+
+                CRoomHandler kRoomHandler = kPlayer.GetRoomHandler();
+                if(isptr(kRoomHandler))
+                {
+                    CRoom kRoom = kRoomHandler.GetRoom();
+                    if(isptr(kRoom))
+                    {
+                        INT iSize = Marshal.SizeOf(tSData);
+                        kCommand.SetData(tSData, iSize);
+
+                        if( 0 > g_kNetMgr.Send(kCommand, iSize))
+                        {
+                            MESSAGE("SEND_USER_CREATE_OBJ: sendign dailde: ");
+                            return false;
+                        }
+                    }
+                    else
+                    {
+                        MESSAGE("SEND_USER_CREATE_OBJ: Room is null: ");
+                        return false;
+                    }
+                }
+                else
+                {
+                    MESSAGE("SEND_USER_CREATE_OBJ: RoomHandler is null: ");
+                    return false;
+                }
+            }
+            return true;
+        }
+
     }
 }
 
