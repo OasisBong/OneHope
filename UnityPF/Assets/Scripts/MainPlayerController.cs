@@ -44,6 +44,9 @@ public class MainPlayerController : GameFramework
     private AudioSource m_AudioSource;
     Vector3 m_TempPosition;
 
+    public GameObject CreateInterface;
+    private bool m_pause = false;
+
     public void Awake()
     {
         g_kFramework.Initialize();
@@ -76,6 +79,8 @@ public class MainPlayerController : GameFramework
     {
         if (this.tag != "MainPlayer") return;
 
+        OpenCreateInterface();
+
         RotateView();
         // the jump state needs to read here to make sure it is not missed
         if (!m_Jump)
@@ -104,6 +109,34 @@ public class MainPlayerController : GameFramework
         }
     }
 
+    void OpenCreateInterface()
+    {
+        if (!CreateInterface.activeSelf && Input.GetKeyDown(KeyCode.C))
+        {
+            m_pause = true;
+            CreateInterface.SetActive(true);
+        }
+        else if (CreateInterface.activeSelf)
+        {
+            if (Input.GetKeyDown(KeyCode.C))
+            {
+                CreateInterface.SetActive(false);
+                m_pause = false;
+            }
+        }
+    }
+    public void CloseCreateInterface()
+    {
+        CreateInterface.SetActive(false);
+        m_pause = false;
+    }
+<<<<<<< .mine
+
+
+=======
+
+    void Move()
+>>>>>>> .theirs
     private void PlayLandingSound()
     {
         m_AudioSource.clip = m_LandSound;
@@ -114,6 +147,7 @@ public class MainPlayerController : GameFramework
     private void FixedUpdate()
     {
         if (this.tag != "MainPlayer") return;
+        if (m_pause) return;
 
         float speed;
         GetInput(out speed);
@@ -251,6 +285,7 @@ public class MainPlayerController : GameFramework
 
     private void RotateView()
     {
+        if (m_pause) return;
         m_MouseLook.LookRotation(transform, m_Camera.transform);
     }
 
