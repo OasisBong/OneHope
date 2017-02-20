@@ -130,13 +130,7 @@ public class MainPlayerController : GameFramework
         CreateInterface.SetActive(false);
         m_pause = false;
     }
-<<<<<<< .mine
 
-
-=======
-
-    void Move()
->>>>>>> .theirs
     private void PlayLandingSound()
     {
         m_AudioSource.clip = m_LandSound;
