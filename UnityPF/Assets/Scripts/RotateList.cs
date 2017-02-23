@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RotateList : MonoBehaviour {
+public class RotateList : GameFramework {
 
     enum MovingState
     {
@@ -94,7 +94,7 @@ public class RotateList : MonoBehaviour {
             {
                 case BuildListIndex.CampFire:
 
-                    CreateManager.Instance.CreateCampfire();
+                    GameObject.Find("CreateManager").GetComponent<CreateManager>().CreateCampfire();
 
                     break;
                 default:
