@@ -57,7 +57,7 @@ namespace UnityEngine {
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
         public struct SUserMoveClToGs
         {
-            public SUserMoveClToGs(bool o) : this() { if (o) { Key = 0; x = 0f; y = 0f; z = 0f; } }
+            public SUserMoveClToGs(bool o) : this() { if (o) { Key = 0; x = 0f; y = 0f; z = 0f; rw = 0f; rx = 0f; ry = 0f; rz = 0f; } }
 
             public UINT32 GetKey() { return Key; }
             public void SetKet(UINT32 o) { Key = o; }
@@ -67,10 +67,46 @@ namespace UnityEngine {
             public float GetZ() { return z; }
             public void SetPosition(float _x, float _y, float _z) { x = _x; y = _y; z = _z; }
 
+            public float GetrW() { return rw; }
+            public float GetrX() { return rx; }
+            public float GetrY() { return ry; }
+            public float GetrZ() { return rz; }
+            public void SetRoteta(float _w, float _x, float _y, float _z) { rw = _w; rx = _x; ry = _y; rz = _z; }
+
+            //==넘겨줄 데이터 선언==//
             UINT32 Key;
             float x;
             float y;
             float z;
+
+            float rw;
+            float rx;
+            float ry;
+            float rz;
+        }
+
+        [Serializable]
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
+        public struct SUserRotationClToGs
+        {
+            public SUserRotationClToGs(bool o) : this() { if (o) { Key = 0; rw = 0f; rx = 0f; ry = 0f; rz = 0f; } }
+
+            public UINT32 GetKey() { return Key; }
+            public void SetKet(UINT32 o) { Key = o; }
+
+            public float GetrW() { return rw; }
+            public float GetrX() { return rx; }
+            public float GetrY() { return ry; }
+            public float GetrZ() { return rz; }
+            public void SetRoteta(float _w, float _x, float _y, float _z) { rw = _w; rx = _x; ry = _y; rz = _z; }
+
+            //==넘겨줄 데이터 선언==//
+            UINT32 Key;
+
+            float rw;
+            float rx;
+            float ry;
+            float rz;
         }
 
         [Serializable]
@@ -93,6 +129,19 @@ namespace UnityEngine {
             float x;
             float y;
             float z;
+        }
+
+        [Serializable]
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
+        public struct sUserAnimator
+        {
+            public sUserAnimator(bool o) : this() { if (o) { Index = 0; } }
+
+            void SetAniIndex(int o) { Index = o; }
+
+            public int GetAniIndex() { return Index; }
+            //==넘겨줄 데이터 선언==//
+            int Index;
         }
     }
 }

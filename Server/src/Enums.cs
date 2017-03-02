@@ -67,7 +67,9 @@ namespace UnityEngine {
 			USER_STATUS,
 			USER_CHAT,
             USER_MOVE,
+            USER_ROTATION,
             USER_CREATE_OBJ,
+            USER_ANIMATOR,
 
             OTHER_STATUS,
 			OTHER_CHAT,

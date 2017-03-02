@@ -171,6 +171,50 @@ namespace UnityEngine {
         }
 
         public static bool
+        CME_USER_ROTATION(CUnit kActor_, CCommand kCommand_)
+        {
+            if (isptr(kActor_))
+            {
+                if (0 < kActor_.GetAid())
+                {
+                    SUserRotationClToGs tRData = (SUserRotationClToGs)kCommand_.GetData(typeof(SUserRotationClToGs));
+                    CRoomHandler kRoomHandler = kActor_.GetRoomHandler();
+                    if (isptr(kRoomHandler))
+                    {
+                        CRoom kRoom = kRoomHandler.GetRoom();
+                        if (isptr(kRoom))
+                        {
+                            INT iSize = Marshal.SizeOf(tRData);
+                            kCommand_.SetData(tRData, iSize);
+                            kRoom.Broadcast(kCommand_, iSize, kActor_);
+                            return true;
+                        }
+                        else
+                        {
+                            OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] Room is null: ");
+                        }
+                    }
+                    else
+                    {
+                        OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] RoomHandler is null: ");
+                    }
+                }
+                else
+                {
+                    OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] Aid is 0: ");
+                }
+            }
+            else
+            {
+                OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] player is null: ");
+            }
+
+            kActor_.Launcher(kCommand_);
+            kActor_.Disconnect();
+            return true;
+        }
+
+        public static bool
         CME_USER_CREATE_OBJ(CUnit kActor_, CCommand kCommand_)
         {
             if (isptr(kActor_))
@@ -214,6 +258,50 @@ namespace UnityEngine {
             return true;
         }
 
+        public static bool
+        CME_USER_ANIMATOR(CUnit kActor_, CCommand kCommand_)
+        {
+            if (isptr(kActor_))
+            {
+                if (0 < kActor_.GetAid())
+                {
+                    sUserAnimator tRData = (sUserAnimator)kCommand_.GetData(typeof(sUserAnimator));
+                    CRoomHandler kRoomHandler = kActor_.GetRoomHandler();
+                    if (isptr(kRoomHandler))
+                    {
+                        CRoom kRoom = kRoomHandler.GetRoom();
+                        if (isptr(kRoom))
+                        {
+                            INT iSize = Marshal.SizeOf(tRData);
+                            kCommand_.SetData(tRData, iSize);
+                            kRoom.Broadcast(kCommand_, iSize);
+                            return true;
+                        }
+                        else
+                        {
+                            OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] Room is null: ");
+                        }
+                    }
+                    else
+                    {
+                        OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] RoomHandler is null: ");
+                    }
+                }
+                else
+                {
+                    OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] Aid is 0: ");
+                }
+            }
+            else
+            {
+                OUTPUT("[" + g_kTick.GetTime() + ":" + kActor_.GetAid() + "] player is null: ");
+            }
+
+            kActor_.Launcher(kCommand_);
+            kActor_.Disconnect();
+            return true;
+        }
+
 
         public static void
 		InitializeUserCommand() {
@@ -221,6 +309,8 @@ namespace UnityEngine {
 			g_bfNativeLauncher[(INT)(PROTOCOL.USER_CHAT)] = new NativeLauncher(CMD_USER_CHAT);
             g_bfNativeLauncher[(INT)(PROTOCOL.USER_MOVE)] = new NativeLauncher(CMD_USER_MOVE);
             g_bfNativeLauncher[(INT)(PROTOCOL.USER_CREATE_OBJ)] = new NativeLauncher(CME_USER_CREATE_OBJ);
+            g_bfNativeLauncher[(INT)(PROTOCOL.USER_ROTATION)] = new NativeLauncher(CME_USER_ROTATION);
+            g_bfNativeLauncher[(INT)(PROTOCOL.USER_ANIMATOR)] = new NativeLauncher(CME_USER_ANIMATOR);
         }
 	}
 }

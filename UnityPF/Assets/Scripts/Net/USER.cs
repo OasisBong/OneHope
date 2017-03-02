@@ -64,11 +64,30 @@ namespace UnityEngine {
         CMD_USER_MOVE(CCommand kCommand_)
         {
             SUserMoveClToGs tRData = (SUserMoveClToGs)kCommand_.GetData(typeof(SUserMoveClToGs));
-            Vector3 temp = new Vector3();
-            temp.x = tRData.GetX();
-            temp.y = tRData.GetY();
-            temp.z = tRData.GetZ();
-            g_kUnitMgr.GetPlayer(tRData.GetKey()).inner.GetGameObject().transform.position = temp;
+            Vector3 tempp = new Vector3();
+            Quaternion tempr = new Quaternion();
+            tempp.x = tRData.GetX();
+            tempp.y = tRData.GetY();
+            tempp.z = tRData.GetZ();
+            tempr.w = tRData.GetrW();
+            tempr.x = tRData.GetrX();
+            tempr.y = tRData.GetrY();
+            tempr.z = tRData.GetrZ();
+            g_kUnitMgr.GetPlayer(tRData.GetKey()).inner.GetGameObject().transform.position = tempp;
+            g_kUnitMgr.GetPlayer(tRData.GetKey()).inner.GetGameObject().transform.rotation = tempr;
+            return true;
+        }
+
+        public static bool
+        CME_USER_ROTATION(CCommand kCommand_)
+        {
+            SUserRotationClToGs tRData = (SUserRotationClToGs)kCommand_.GetData(typeof(SUserRotationClToGs));
+            Quaternion tempr = new Quaternion();
+            tempr.w = tRData.GetrW();
+            tempr.x = tRData.GetrX();
+            tempr.y = tRData.GetrY();
+            tempr.z = tRData.GetrZ();
+            g_kUnitMgr.GetPlayer(tRData.GetKey()).inner.GetGameObject().transform.rotation = tempr;
             return true;
         }
 
@@ -83,12 +102,24 @@ namespace UnityEngine {
             return true;
         }
 
+        public static bool
+        CME_USER_ANIMATOR(CCommand kCommand_)
+        {
+            sUserAnimator tRData = (sUserAnimator)kCommand_.GetData(typeof(sUserAnimator));
+
+
+
+            return true;
+        }
+
         public static void
 		InitializeUserCommand() {
 			g_bfNativeLauncher[(INT)(PROTOCOL.USER_STATUS)] = new NativeLauncher(CMD_USER_STATUS);
 			g_bfNativeLauncher[(INT)(PROTOCOL.USER_CHAT)] = new NativeLauncher(CMD_USER_CHAT);
             g_bfNativeLauncher[(INT)(PROTOCOL.USER_MOVE)] = new NativeLauncher(CMD_USER_MOVE);
             g_bfNativeLauncher[(INT)(PROTOCOL.USER_CREATE_OBJ)] = new NativeLauncher(CME_USER_CREATE_OBJ);
+            g_bfNativeLauncher[(INT)(PROTOCOL.USER_ROTATION)] = new NativeLauncher(CME_USER_ROTATION);
+            g_bfNativeLauncher[(INT)(PROTOCOL.USER_ANIMATOR)] = new NativeLauncher(CME_USER_ANIMATOR);
         }
 	}
 }

@@ -9,6 +9,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 [RequireComponent(typeof(CharacterController))]
 [RequireComponent(typeof(AudioSource))]
+[RequireComponent(typeof(Animator))]
 public class MainPlayerController : GameFramework
 {
     [SerializeField] private bool m_IsWalking;
@@ -43,6 +44,8 @@ public class MainPlayerController : GameFramework
     private bool m_Jumping;
     private AudioSource m_AudioSource;
     Vector3 m_TempPosition;
+    Quaternion m_TempRoTatuon;
+    private Animator m_Ani;
 
     public GameObject CreateInterface;
     private bool m_pause = false;
@@ -64,14 +67,17 @@ public class MainPlayerController : GameFramework
         m_Jumping = false;
         m_AudioSource = GetComponent<AudioSource>();
         m_MouseLook.Init(transform, m_Camera.transform);
+        m_Ani = GetComponent<Animator>();
 
-        if(isptr(g_kUnitMgr.GetMainPlayer()))
+        if (isptr(g_kUnitMgr.GetMainPlayer()))
         {
             m_TempPosition = this.transform.position;
+            m_TempRoTatuon = this.transform.rotation;
         }
         else
         {
             m_TempPosition = new Vector3();
+            m_TempRoTatuon = new Quaternion();
         }
     }
 
@@ -101,12 +107,6 @@ public class MainPlayerController : GameFramework
         }
 
         m_PreviouslyGrounded = m_CharacterController.isGrounded;
-
-        if (m_TempPosition != this.transform.position)
-        {
-            SEND_USER_MOVE();
-            m_TempPosition = this.transform.position;
-        }
     }
 
     void OpenCreateInterface()
@@ -180,6 +180,18 @@ public class MainPlayerController : GameFramework
         UpdateCameraPosition(speed);
 
         m_MouseLook.UpdateCursorLock();
+
+        if (m_TempPosition != this.transform.position)
+        {
+            m_TempPosition = this.transform.position;
+            SEND_USER_MOVE();
+        }
+
+        if(m_TempRoTatuon != this.transform.rotation)
+        {
+            m_TempRoTatuon = this.transform.rotation;
+            SEND_USER_ROTATION();
+        }
     }
 
     private void PlayJumpSound()
@@ -269,6 +281,13 @@ public class MainPlayerController : GameFramework
         {
             StopAllCoroutines();
             StartCoroutine(!m_IsWalking ? m_FovKick.FOVKickUp() : m_FovKick.FOVKickDown());
+        }
+
+        m_Ani.SetFloat("IsWalk", vertical);
+
+        if(vertical == 0 && Mathf.Abs(horizontal) > 0)
+        {
+            m_Ani.SetFloat("IsWalk", Mathf.Abs(horizontal));
         }
     }
 
