@@ -905,6 +905,8 @@ GameObject:
   - component: {fileID: 4777576155323344}
   - component: {fileID: 143718142472964322}
   - component: {fileID: 82581020324958940}
+  - component: {fileID: 114745567837672168}
+  - component: {fileID: 95560362690460912}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -5163,6 +5165,23 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95560362690460912
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314650323668756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 8f0565f23a2b58541a475bd3c1393052, type: 3}
+  m_Controller: {fileID: 9100000, guid: cfc4a3f109ced26408c2e2dec31f2c7c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114380201988229042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5200,6 +5219,17 @@ MonoBehaviour:
   - {fileID: 7400000, guid: 4f32f4345ffde43aca2270c41dcf6e81, type: 2}
   - {fileID: 7400000, guid: 73cb3ae8fc1de47a0a307cb5f95ec701, type: 2}
   delayWeight: 0.3
+--- !u!114 &114745567837672168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1314650323668756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c20f523668382c0409665c7915347cd1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!137 &137109371784564244
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

@@ -262,7 +262,7 @@ namespace UnityEngine
         }
         
         public static bool
-        SEND_USER_ANIMATOR(int AnimatorIndex)
+        SEND_USER_ANIMATOR(string name, ANIME_NUM AnimatorIndex)
         {
             GamePlayer kPlayer = g_kUnitMgr.GetMainPlayer();
             if (isptr(kPlayer))
@@ -272,6 +272,7 @@ namespace UnityEngine
                 kCommand.SetExtra((UINT)EXTRA.OK);
 
                 sUserAnimator tSData = new sUserAnimator(true);
+                tSData.SetName(Encoding.UTF8.GetBytes(name));
                 tSData.SetAniIndex(AnimatorIndex);
 
                 CRoomHandler kRoomHandler = kPlayer.GetRoomHandler();

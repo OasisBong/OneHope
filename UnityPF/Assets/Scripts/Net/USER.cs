@@ -106,9 +106,7 @@ namespace UnityEngine {
         CME_USER_ANIMATOR(CCommand kCommand_)
         {
             sUserAnimator tRData = (sUserAnimator)kCommand_.GetData(typeof(sUserAnimator));
-
-
-
+            GameObject.Find((Encoding.Default.GetString(tRData.GetName())).Trim('\0')).GetComponent<SendPlayerAnimator>().Animator(tRData.GetAniIndex());
             return true;
         }
 

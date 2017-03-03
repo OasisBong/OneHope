@@ -46,6 +46,7 @@ public class MainPlayerController : GameFramework
     Vector3 m_TempPosition;
     Quaternion m_TempRoTatuon;
     private Animator m_Ani;
+    private int oneStopAni;
 
     public GameObject CreateInterface;
     private bool m_pause = false;
@@ -68,6 +69,7 @@ public class MainPlayerController : GameFramework
         m_AudioSource = GetComponent<AudioSource>();
         m_MouseLook.Init(transform, m_Camera.transform);
         m_Ani = GetComponent<Animator>();
+        oneStopAni = 100;
 
         if (isptr(g_kUnitMgr.GetMainPlayer()))
         {
@@ -288,6 +290,29 @@ public class MainPlayerController : GameFramework
         if(vertical == 0 && Mathf.Abs(horizontal) > 0)
         {
             m_Ani.SetFloat("IsWalk", Mathf.Abs(horizontal));
+        }
+
+        if (horizontal != 0 || vertical != 0)
+        {
+            if (vertical < 0)
+            {
+                SEND_USER_ANIMATOR("Player: " + g_kUnitMgr.GetMainPlayer().GetKey(), ANIME_NUM.WALK_B);
+            }
+            else
+            {
+                SEND_USER_ANIMATOR("Player: " + g_kUnitMgr.GetMainPlayer().GetKey(), ANIME_NUM.WALK_F);
+            }
+            oneStopAni = 1;
+        }
+
+        if(oneStopAni == 1 && (horizontal == 0 || vertical == 0))
+        {
+            oneStopAni = 2;
+        }
+
+        if (oneStopAni == 2)
+        {
+            SEND_USER_ANIMATOR("Player: " + g_kUnitMgr.GetMainPlayer().GetKey(), ANIME_NUM.STOP);
         }
     }
 

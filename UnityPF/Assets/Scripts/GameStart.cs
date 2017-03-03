@@ -57,6 +57,8 @@ public class GameStart : GameFramework {
             {
                 PlayerObj.tag = "Player";
                 g_kUnitMgr.GetPlayer(g_kUnitMgr.GetMainPlayer().GetRoomHandler().GetRoom().GetMember(i).GetKey()).inner.SetGameObject(Instantiate(PlayerObj));
+                g_kUnitMgr.GetPlayer(g_kUnitMgr.GetMainPlayer().GetRoomHandler().GetRoom().GetMember(i).GetKey()).inner.GetGameObject().name =
+                    "Player: " + g_kUnitMgr.GetPlayer(g_kUnitMgr.GetMainPlayer().GetRoomHandler().GetRoom().GetMember(i).GetKey()).GetKey().ToString();
             }
         }
     }

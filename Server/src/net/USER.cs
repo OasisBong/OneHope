@@ -230,7 +230,7 @@ namespace UnityEngine {
                         {
                             INT iSize = Marshal.SizeOf(tRData);
                             kCommand_.SetData(tRData, iSize);
-                            kRoom.Broadcast(kCommand_, iSize);
+                            kRoom.Broadcast(kCommand_, iSize, kActor_);
                             return true;
                         }
                         else
@@ -274,7 +274,7 @@ namespace UnityEngine {
                         {
                             INT iSize = Marshal.SizeOf(tRData);
                             kCommand_.SetData(tRData, iSize);
-                            kRoom.Broadcast(kCommand_, iSize);
+                            kRoom.Broadcast(kCommand_, iSize, kActor_);
                             return true;
                         }
                         else

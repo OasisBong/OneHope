@@ -217,6 +217,16 @@ namespace UnityEngine {
 			SCENE_NONE,
 			SCENE_MAX = SCENE_NONE
 		}
+
+        public enum ANIME_NUM
+        {
+            ANIME_NUM_NULL = 0,
+            STOP,
+            WALK_F,
+            WALK_B,
+            ANIME_NUM_NONE,
+            ANIME_NUM_MAX = ANIME_NUM_NONE
+        }
 	}
 }
 

@@ -135,13 +135,18 @@ namespace UnityEngine {
         [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Ansi, Pack = 4)]
         public struct sUserAnimator
         {
-            public sUserAnimator(bool o) : this() { if (o) { Index = 0; } }
+            public sUserAnimator(bool o) : this() { if (o) { name = new CHAR[iMAX_CHAT_LEN + 1]; Index = 0; } }
 
-            public void SetAniIndex(int o) { Index = o; }
+            public CHAR[] GetName() { INT iOffset = 0; for (UINT i = 0; i < name.Length; ++i) { ++iOffset; if ((CHAR)('\0') == name[i]) break; } Array.Clear(name, iOffset, name.Length - iOffset); return name; }
+            public void SetName(CHAR[] o) { INT iLength = o.Length; if (iMAX_CHAT_LEN < iLength) { iLength = iMAX_CHAT_LEN; } Array.Copy(o, 0, name, 0, iLength); name[iMAX_CHAT_LEN] = (CHAR)('\0'); }
 
-            public int GetAniIndex() { return Index; }
+            public ANIME_NUM GetAniIndex() { return Index; }
+            public void SetAniIndex(ANIME_NUM o) { Index = o; }
             //==넘겨줄 데이터 선언==//
-            int Index;
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = iMAX_CHAT_LEN + 1)]
+            CHAR[] name;
+
+            ANIME_NUM Index;
         }
     }
 }
